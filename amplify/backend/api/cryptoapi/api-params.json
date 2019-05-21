@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/coins",
+            "lambdaFunction": "cryptofunction",
+            "privacy": {
+                "private": true,
+                "auth": []
+            }
+        }
+    ],
+    "resourceName": "cryptoapi",
+    "apiName": "cryptoapi",
+    "functionArns": [
+        {
+            "lambdaFunction": "cryptofunction"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplifyreactapp-dev-20190521100719-authRole",
+        "unAuthRoleName": "amplifyreactapp-dev-20190521100719-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "cryptofunction",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
